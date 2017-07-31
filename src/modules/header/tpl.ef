@@ -1,5 +1,6 @@
 >header.{{class.header}}
 	@dblclick = scrollTop
-	-left
+	>div.{{class.left}}
+		+left
 	-middle
 	-right

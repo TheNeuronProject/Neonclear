@@ -1,0 +1,16 @@
+/* Write the style of the module here.
+ * No manual namespace needed, it will be done automatically
+ */
+
+@import '../../global.css';
+
+.text_logo {
+	height: 100%;
+	font-size: 40px;
+	font-family: 'Megrim', cursive;
+  background: linear-gradient(90deg, var(--color-left), var(--color-right));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	user-select: none;
+	cursor: default;
+}
