@@ -17,6 +17,7 @@ const postcssModules = require('postcss-modules')
 const simplevars = require('postcss-simple-vars')
 const nested = require('postcss-nested')
 const cssnext = require('postcss-cssnext')
+const postcssimport = require('postcss-import')
 const cssnano = require('cssnano')
 const imageInliner = require('postcss-image-inliner')
 
@@ -26,14 +27,15 @@ const git = require('git-rev-sync')
 // ef configuration
 const {
 	entry = 'src/main.js',
-	bundle = 'main.js',
+	bundle = 'bundle.js',
 	assets = 'src/assets',
 	devPath = 'test',
 	proPath = 'dist',
 	limit = 10240,
 	b64svg = false,
 	format = 'iife',
-	sourceMap = 'inline'
+	sourceMap = 'inline',
+	moduleName = 'bundle'
 } = require('./ef.config.js')
 
 const cssExportMap = {}
@@ -41,12 +43,12 @@ const cssExportMap = {}
 module.exports = {
 	entry,
 	bundle: path.normalize(bundle),
-	assets: path.normalize(assets),
 	devPath: path.normalize(devPath),
 	proPath: path.normalize(proPath),
 	limit,
 	format,
 	sourceMap,
+	moduleName,
 	plugins: [
 		progress({
 			clearLine: false
@@ -65,6 +67,7 @@ module.exports = {
 				simplevars(),
 				nested(),
 				cssnext({ warnForDuplicates: false }),
+				postcssimport(),
 				postcssModules({
 					getJSON(id, exportTokens) {
 						cssExportMap[id] = exportTokens

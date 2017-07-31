@@ -1,0 +1,9 @@
+@import '../../global.css';
+
+.header {
+	height: 60px;
+	border-bottom: 2px solid;
+	border-image: linear-gradient(90deg, var(--color-left), var(--color-right));
+	border-image-slice: 1;
+	box-shadow: var(--color-shadow) 0px 3px 5px;
+}

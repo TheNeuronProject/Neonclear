@@ -6,6 +6,7 @@ module.exports = {
 	proPath: 'dist',
 	limit: 10240,
 	b64svg: false,
-	format: 'iife',
+	format: 'umd',
+	moduleName: 'neon',
 	sourceMap: true
 }

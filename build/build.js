@@ -1,43 +1,28 @@
-console.log('[EF]', 'Build starting...')
+console.log('[RD]', 'Build starting...')
 
 require('shelljs/global')
 env.NODE_ENV = 'production'
 
 const rollup = require('rollup').rollup
-const fs = require('fs-extra')
-const ah = require('./utils/assets-helper.js')
 const {
 	entry,
 	bundle,
-	assets,
 	proPath,
-	limit,
 	format,
+	moduleName,
 	plugins
 } = require('../config/rollup.config')
 
 const dest = `${proPath}/${bundle}`
 
-const build = () => {
-	console.log('[EF]', 'Building...')
-	rollup({
-		entry,
-		plugins
-	})
-	.then((bundle) => {
-		console.log('[EF]', 'Writing bundle...')
-		bundle.write({ dest, format })
-	})
-	.then(() => console.log('[EF]', 'Build successful!'))
-}
+console.log('[RD]', 'Building...')
 
-fs.emptyDir(proPath, (err) => {
-	if (err) return console.log(err)
-	console.log('[EF]', 'Distribution directory emptied.')
-	ah({
-		inPath: assets,
-		outPath: proPath,
-		limit,
-		build
-	})
+rollup({
+	entry,
+	plugins
 })
+.then((bundle) => {
+	console.log('[RD]', 'Writing bundle...')
+	bundle.write({ dest, moduleName, format })
+})
+.then(() => console.log('[RD]', 'Build successful!'))
