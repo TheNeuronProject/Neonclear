@@ -1,5 +1,4 @@
 # Generated files
-bin/
 gen/
 
 # Log Files
@@ -16,6 +15,8 @@ cache/
 # Project files
 plugins/
 test/
+dist/*.map
+dist/*.html
 
 # node modules
 node_modules/
