@@ -2,7 +2,7 @@
  * No manual namespace needed, it will be done automatically
  */
 
-@import '../../global.css';
+@import '../../variables.css';
 
 .text_logo {
 	height: 100%;

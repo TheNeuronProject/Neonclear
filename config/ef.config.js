@@ -8,5 +8,6 @@ module.exports = {
 	b64svg: false,
 	format: 'umd',
 	moduleName: 'neon',
-	sourceMap: true
+	sourceMap: true,
+	extract: false
 }

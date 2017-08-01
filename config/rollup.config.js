@@ -21,9 +21,6 @@ const postcssimport = require('postcss-import')
 const cssnano = require('cssnano')
 const imageInliner = require('postcss-image-inliner')
 
-// Other dependences
-const git = require('git-rev-sync')
-
 // ef configuration
 const {
 	entry = 'src/main.js',
@@ -35,7 +32,8 @@ const {
 	b64svg = false,
 	format = 'iife',
 	sourceMap = 'inline',
-	moduleName = 'bundle'
+	moduleName = 'bundle',
+	extract = false
 } = require('./ef.config.js')
 
 const cssExportMap = {}
@@ -83,11 +81,10 @@ module.exports = {
 			getExport(id) {
 				return cssExportMap[id]
 			},
-			combineStyleTags: true
+			extract
 		}),
 		replace({
-			ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
-			GITVERSION: JSON.stringify(`${git.branch()}.${git.short()}`)
+			ENV: JSON.stringify(process.env.NODE_ENV || 'development')
 		}),
 		buble({
 			transforms: {

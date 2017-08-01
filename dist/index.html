@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Neonclear Test Page</title>
+	<link href="https://fonts.googleapis.com/css?family=Megrim|PT+Sans" rel="stylesheet">
+</head>
+<body>
+	<script src="./neonclear.js"></script>
+	<script>
+		/* global neon */
+		neon.inform()
+		var body = new neon.Body()
+		var header = new neon.Header()
+		var logo = new neon.TextLogo()
+		body.header = header
+		header.left.push(logo)
+		body.$mount({target: document.body, option: 'replace'})
+		neon.exec()
+	</script>
+</body>
+</html>
