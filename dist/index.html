@@ -3,9 +3,15 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Neonclear Test Page</title>
+	<meta name="description" content="The ef.js based progressive UI framework">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="theme-color" content="#FFF">
+	<title>Neonclear</title>
 </head>
 <body>
+	<h1>Neonclear</h1>
+	<p>Javascript is required for this site.</p>
 	<script src="./neonclear.js"></script>
 	<script>
 		/* global neon */
@@ -13,7 +19,27 @@
 		var body = new neon.Body()
 		var header = new neon.Header()
 		var logo = new neon.TextLogo()
-		body.header = header
+		var BL = new neon.BannerLogo()
+		var buttonSoon = new neon.Button({$data: {caption: 'Coming Soon...'}})
+		var buttonGH = new neon.Button({
+			$data: {
+				caption: 'View in GitHub'
+			},
+			$methods: {
+				click: function() {
+					window.open('https://github.com/TheNeuronProject/Neonclear')
+				}
+			}
+		})
+		var LP = new neon.LogoPage({
+			$data: {
+				caption: 'The ef.js based progressive UI framework'
+			},
+			logo: BL,
+			buttons: [buttonSoon, buttonGH]
+		})
+		var footer = new neon.Footer({$data: {author: 'Yukino Song'}})
+		body.contents.push(header, LP, footer)
 		header.left.push(logo)
 		body.$mount({target: document.body, option: 'replace'})
 		neon.exec()
