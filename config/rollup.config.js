@@ -33,7 +33,8 @@ const {
 	format = 'iife',
 	sourceMap = 'inline',
 	moduleName = 'bundle',
-	extract = false
+	extract = false,
+	combineStyleTags = false
 } = require('./ef.config.js')
 
 const cssExportMap = {}
@@ -81,7 +82,8 @@ module.exports = {
 			getExport(id) {
 				return cssExportMap[id]
 			},
-			extract
+			extract,
+			combineStyleTags
 		}),
 		replace({
 			ENV: JSON.stringify(process.env.NODE_ENV || 'development')

@@ -9,5 +9,6 @@ module.exports = {
 	format: 'umd',
 	moduleName: 'neon',
 	sourceMap: true,
-	extract: false
+	extract: false,
+	combineStyleTags: true
 }
