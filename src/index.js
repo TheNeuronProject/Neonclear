@@ -4,12 +4,23 @@ import { version } from '../package.json'
 import 'normalize.css'
 // Import global style
 import './global.css'
+
+// Add fonts
+const fonts = ['Megrim', 'PT Sans'].map(item => item.replace(/\s/g, '+'))
+
+const fontLink = document.createElement('link')
+fontLink.rel = 'stylesheet'
+fontLink.href = `https://fonts.googleapis.com/css?family=${fonts.join('|')}`
+;(document.head || document.getElementsByTagName('head')[0]).appendChild(fontLink)
+
 // Export ef
 export * from 'ef.js'
 // Export every module
 export * from './modules/body'
 export * from './modules/header'
 export * from './modules/text_logo'
+export * from './modules/page'
+export * from './modules/footer'
 
 // Log style
 const ls = `

@@ -1,0 +1,12 @@
+Write your template here:
+>footer.{{class.footer}}
+	>p.{{class.copyright}}
+		.Copyright © {{year}} {{author = Author}}
+		>br
+		.Built with &
+		>b
+			>a
+				#href = https://neon.atm.re
+				#rel = noopener
+				#target = _blank
+				.Neonclear

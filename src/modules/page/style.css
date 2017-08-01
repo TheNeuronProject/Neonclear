@@ -4,6 +4,7 @@
 
 @import '../../variables.css';
 
-.neonclear {
-	font-family: 'PT Sans', sans-serif;
+.page {
+	height: 100%;
+	width: 100%;
 }

@@ -8,7 +8,7 @@
 	height: 100%;
 	font-size: 40px;
 	font-family: 'Megrim', cursive;
-  background: linear-gradient(90deg, var(--color-left), var(--color-right));
+	background: linear-gradient(90deg, var(--color-left), var(--color-right));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	user-select: none;

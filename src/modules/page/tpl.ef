@@ -1,0 +1,3 @@
+Write your template here:
+>section.{{class.page}}
+	+contents

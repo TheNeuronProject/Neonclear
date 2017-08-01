@@ -1,2 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
 @import url('https://fonts.googleapis.com/css?family=Megrim');
+
+html, body {
+	height: 100%;
+}
