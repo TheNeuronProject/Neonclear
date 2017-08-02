@@ -11,6 +11,7 @@
 	border-image: linear-gradient(90deg, var(--color-left), var(--color-right));
 	border-image-slice: 1;
 	box-shadow: var(--color-shadow) 0px -3px 5px;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -20,6 +21,17 @@
 		background: linear-gradient(90deg, var(--color-left), var(--color-right));
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		backdrop-filter: blur(20px);
+		background: hsla(0,0%,100%,.7);
+		z-index: -1;
 	}
 }
 

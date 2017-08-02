@@ -3,7 +3,7 @@ language: node_js
 node_js:
 - '8'
 env:
-- CI_BUILD=true
+- BUILD_ENV=CI
 cache:
   directories:
   - node_modules

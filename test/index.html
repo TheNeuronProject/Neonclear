@@ -13,36 +13,5 @@
 	<h1>Neonclear</h1>
 	<p>Javascript is required for this site.</p>
 	<script src="./neonclear.js"></script>
-	<script>
-		/* global neon */
-		neon.inform()
-		var body = new neon.Body()
-		var header = new neon.Header()
-		var logo = new neon.TextLogo()
-		var BL = new neon.BannerLogo()
-		var buttonSoon = new neon.Button({$data: {caption: 'Coming Soon...'}})
-		var buttonGH = new neon.Button({
-			$data: {
-				caption: 'View in GitHub'
-			},
-			$methods: {
-				click: function() {
-					window.open('https://github.com/TheNeuronProject/Neonclear')
-				}
-			}
-		})
-		var LP = new neon.LogoPage({
-			$data: {
-				caption: 'The ef.js based progressive UI framework'
-			},
-			logo: BL,
-			buttons: [buttonSoon, buttonGH]
-		})
-		var footer = new neon.Footer({$data: {author: 'Yukino Song'}})
-		body.contents.push(header, LP, footer)
-		header.left.push(logo)
-		body.$mount({target: document.body, option: 'replace'})
-		neon.exec()
-	</script>
 </body>
 </html>

@@ -2,19 +2,7 @@
 console.log('[RD]', 'Build starting...')
 
 require('shelljs/global')
-if (!env.DEMO_BUILD) env.NODE_ENV = 'production'
-
-if (env.DEMO_BUILD) console.log(`
-+------------+
-| DEMO BUILD |
-+------------+
-`)
-
-if (env.CI_BUILD) console.log(`
-+------------+
-|  CI BUILD  |
-+------------+
-`)
+if (env.BUILD_ENV !== 'DEMO') env.NODE_ENV = 'production'
 
 const rollup = require('rollup').rollup
 const {
@@ -37,6 +25,6 @@ rollup({
 })
 .then((bundle) => {
 	console.log('[RD]', 'Writing bundle...')
-	bundle.write({ dest, moduleName, format, sourceMap: env.DEMO_BUILD || env.CI_BUILD ? sourceMap : false })
+	bundle.write({ dest, moduleName, format, sourceMap: env.BUILD_ENV === 'DEMO' || env.BUILD_ENV === 'CI' ? sourceMap : false })
 })
 .then(() => console.log('[RD]', 'Build successful!'))

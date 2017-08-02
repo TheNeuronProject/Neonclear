@@ -1,0 +1,20 @@
+/* Write the style of the module here.
+ * No manual namespace needed, it will be done automatically
+ */
+
+@import '../variables.css';
+
+html {
+	background-image: url('https://i.loli.net/2017/08/03/59820ac27a362.png');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.demo {
+	p {
+		background: linear-gradient(90deg, var(--color-left), var(--color-right));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}

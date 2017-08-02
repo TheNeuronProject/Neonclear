@@ -1,5 +1,5 @@
 Write your template here:
->section.{{class.page}}
+>section.{{class.page}}.{{class.names}}
 	-logo
 	>p.{{class.caption}}
 		.{{caption}}

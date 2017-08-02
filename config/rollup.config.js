@@ -37,6 +37,33 @@ const {
 	combineStyleTags = false
 } = require('./ef.config.js')
 
+// Log build environment
+switch (process.env.BUILD_ENV) {
+	case 'DEMO': {
+		console.log(`
++------------+
+| DEMO BUILD |
++------------+
+`)
+		break
+	}
+	case 'CI': {
+		console.log(`
++----------+
+| CI BUILD |
++----------+
+`)
+		break
+	}
+	default: {
+		console.log(`
++--------------+
+| NORMAL BUILD |
++--------------+
+`)
+	}
+}
+
 const cssExportMap = {}
 
 module.exports = {
@@ -86,7 +113,8 @@ module.exports = {
 			combineStyleTags
 		}),
 		replace({
-			ENV: JSON.stringify(process.env.NODE_ENV || 'development')
+			ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+			'// DEMO_BUILD_UNCOMMENT ': process.env.BUILD_ENV === 'DEMO' ? '' : '// '
 		}),
 		buble({
 			transforms: {

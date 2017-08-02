@@ -29,5 +29,7 @@ export * from './modules/button'
 const ls = `
 color: #b200fb;
 `
-
 if (ENV !== 'production') console.log('%c[NEON]', ls, `Neonclear v${version} loaded!`)
+
+
+// DEMO_BUILD_UNCOMMENT import './demo/demo.js'

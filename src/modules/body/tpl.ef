@@ -1,2 +1,2 @@
->body.{{class.neonclear}}
+>body.{{class.neonclear}}.{{class.names}}
 	+contents

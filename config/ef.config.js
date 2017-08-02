@@ -1,5 +1,5 @@
 module.exports = {
-	entry: 'src/index.js',
+	entry: 'src/neonclear.js',
 	bundle: 'neonclear.js',
 	assets: 'src/assets',
 	devPath: 'test',

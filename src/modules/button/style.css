@@ -16,6 +16,7 @@
 	border: 2px solid;
 	border-image: linear-gradient(90deg, var(--color-left), var(--color-right));
 	border-image-slice: 1;
+	position: relative;
 	display: inline-block;
 	margin: 0 5px;
 	cursor: pointer;
