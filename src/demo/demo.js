@@ -40,7 +40,7 @@ const LP = new LogoPage({
 	buttons: [buttonSoon, buttonGH]
 })
 const footer = new Footer({$data: {author: 'Yukino Song'}})
-body.contents.push(header, LP, footer)
+body.contents.push(LP, footer, header)
 header.left.push(logo)
 body.$mount({target: document.body, option: 'replace'})
 exec()
