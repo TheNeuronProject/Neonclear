@@ -1,0 +1,4 @@
+Write your template here:
+>div.{{class.side_panel}}
+	>div.{{class.drag_button}}
+	>div.{{class.holder}}

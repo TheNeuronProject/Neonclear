@@ -1,9 +1,11 @@
 // Import basic elements
 import {
 	inform, exec, Body, Header,
-	TextLogo, BannerLogo, Button,
+	TextLogo, Button,
 	LogoPage, Footer
 } from '../neonclear.js'
+
+import Logo from './logo.ef'
 
 import style from './style.css'
 
@@ -11,7 +13,11 @@ inform()
 const body = new Body()
 const header = new Header()
 const logo = new TextLogo()
-const BL = new BannerLogo()
+const BL = new Logo({
+	$data: {
+		class: style
+	}
+})
 const buttonSoon = new Button({$data: {caption: 'Coming Soon...'}})
 const buttonGH = new Button({
 	$data: {
