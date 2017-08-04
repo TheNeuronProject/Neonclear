@@ -1,8 +1,8 @@
 // Import basic elements
 import {
 	inform, exec, Body, Header,
-	TextLogo, Button,
-	LogoPage, Footer
+	TextLogo, LogoButton,
+	LogoPage, Footer, SidePanel
 } from '../neonclear.js'
 
 import Logo from './logo.ef'
@@ -12,14 +12,18 @@ import style from './style.css'
 inform()
 const body = new Body()
 const header = new Header()
-const logo = new TextLogo()
+const logo = new TextLogo({
+	$data: {
+		class: style
+	}
+})
 const BL = new Logo({
 	$data: {
 		class: style
 	}
 })
-const buttonSoon = new Button({$data: {caption: 'Coming Soon...'}})
-const buttonGH = new Button({
+const buttonSoon = new LogoButton({$data: {caption: 'Coming Soon...'}})
+const buttonGH = new LogoButton({
 	$data: {
 		caption: 'View in GitHub'
 	},
@@ -40,7 +44,8 @@ const LP = new LogoPage({
 	buttons: [buttonSoon, buttonGH]
 })
 const footer = new Footer({$data: {author: 'Yukino Song'}})
-body.contents.push(LP, footer, header)
+const SP = new SidePanel()
+body.contents.push(LP, footer, header, SP)
 header.left.push(logo)
 body.$mount({target: document.body, option: 'replace'})
 exec()

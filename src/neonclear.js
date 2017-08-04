@@ -6,11 +6,11 @@ import 'normalize.css'
 import './global.css'
 
 // Add fonts
-const fonts = ['Megrim', 'PT Sans'].map(item => item.replace(/\s/g, '+'))
+const fonts = ['Megrim', 'PT Sans', 'Material Icons']
 
 const fontLink = document.createElement('link')
 fontLink.rel = 'stylesheet'
-fontLink.href = `https://fonts.googleapis.com/css?family=${fonts.join('|')}`
+fontLink.href = `https://fonts.googleapis.com/css?family=${fonts.map(item => item.replace(/\s/g, '+')).join('|')}`
 ;(document.head || document.getElementsByTagName('head')[0]).appendChild(fontLink)
 
 // Export ef
@@ -23,7 +23,7 @@ export * from './modules/text_logo'
 export * from './modules/banner_logo'
 export * from './modules/page'
 export * from './modules/logo_page'
-export * from './modules/button'
+export * from './modules/side_panel'
 
 // Log style
 const ls = `

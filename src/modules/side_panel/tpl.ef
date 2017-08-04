@@ -1,4 +1,8 @@
 Write your template here:
 >div.{{class.side_panel}}
-	>div.{{class.drag_button}}
+	>div.{{class.menu_button}}
+		>i.material-icons
+			.menu
 	>div.{{class.holder}}
+		>h1
+			.{{title = Menu}}
