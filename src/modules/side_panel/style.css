@@ -16,7 +16,7 @@ $framecolor: #88888888;
 	max-width: 320px;
 	transform: translate3d(-320px, 0, 0);
 	transition: transform cubic-bezier(0.18, 0.89, 0.32, 1.06) .5s;
-	background: linear-gradient(-20deg, #000, #333);
+	background: linear-gradient(-30deg, #000, #333);
 	.menu_button {
 		position: absolute;
 		box-sizing: border-box;
@@ -50,7 +50,9 @@ $framecolor: #88888888;
 	width: 100%;
 	padding: 0 20px 0 30px;
 	color: #FFF;
+	box-sizing: border-box;
 	h1 {
+		display: inline-block;
 		margin: 0;
 		height: 60px;
 		line-height: 60px;
