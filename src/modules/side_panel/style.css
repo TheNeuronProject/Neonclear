@@ -28,7 +28,7 @@ $framecolor: #88888888;
 		border: $framecolor 2px solid;
 		color: $framecolor;
 		user-select: none;
-		cursor: default;
+		cursor: pointer;
 		transition: transform cubic-bezier(0.18, 0.89, 0.32, 1.06) .5s;
 		i {
 			height: 100%;
