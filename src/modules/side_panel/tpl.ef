@@ -1,6 +1,11 @@
 Write your template here:
 >div.{{class.side_panel}}
-	>div.{{class.menu_button}}
+	#tabindex = 0
+	>div.{{class.menu_button}}.{{class.retract}}
+		#tabindex = 0
+		>i.material-icons
+			.menu
+	>div.{{class.menu_button}}.{{class.expand}}
 		>i.material-icons
 			.menu
 	>div.{{class.holder}}

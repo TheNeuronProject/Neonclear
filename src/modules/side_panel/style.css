@@ -17,6 +17,7 @@ $framecolor: #88888888;
 	transform: translate3d(-320px, 0, 0);
 	transition: transform cubic-bezier(0.18, 0.89, 0.32, 1.06) .5s;
 	background: linear-gradient(-30deg, #000, #333);
+	outline: none;
 	.menu_button {
 		position: absolute;
 		box-sizing: border-box;
@@ -29,7 +30,7 @@ $framecolor: #88888888;
 		color: $framecolor;
 		user-select: none;
 		cursor: pointer;
-		transition: transform cubic-bezier(0.18, 0.89, 0.32, 1.06) .5s;
+		transition: transform cubic-bezier(0.18, 0.89, 0.32, 0.92) .5s;
 		i {
 			height: 100%;
 			line-height: 36px;
@@ -37,11 +38,21 @@ $framecolor: #88888888;
 			text-align: center;
 			font-size: 30px;
 		}
+		&.retract {
+			visibility: hidden;
+			outline: none;
+		}
 	}
-	&:hover {
+	&:focus {
 		transform: translate3d(-20px, 0, 0);
 		.menu_button {
 			transform: translate3d(0, 0, 0);
+			&.expand {
+				visibility: hidden;
+			}
+			&.retract {
+				visibility: visible;
+			}
 		}
 	}
 }
