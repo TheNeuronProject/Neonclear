@@ -11,5 +11,4 @@ Write your template here:
 	>div.{{class.holder}}
 		>h1
 			.{{title = Menu}}
-		>div
-			+content
+		+contents

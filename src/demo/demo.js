@@ -1,8 +1,7 @@
 // Import basic elements
 import {
-	inform, exec, Body, Header,
-	TextLogo, LogoButton,
-	LogoPage, Footer, SidePanel
+	inform, exec, Body, Header, TextLogo, LogoButton,
+	LogoPage, Footer, SidePanel, SidePanelSection, SidePanelItem
 } from '../neonclear.js'
 
 import Logo from './logo.ef'
@@ -44,7 +43,74 @@ const LP = new LogoPage({
 	buttons: [buttonSoon, buttonGH]
 })
 const footer = new Footer({$data: {author: 'Yukino Song'}})
-const SP = new SidePanel()
+const SP = new SidePanel({
+	contents: [
+		new SidePanelSection({
+			$data: {
+				title: 'Intro'
+			},
+			items: [
+				new SidePanelItem({
+					$data: {
+						title: 'ef.js'
+					},
+					$methods: {
+						click() {
+							window.open('https://ef.js.org')
+						}
+					}
+				})
+			]
+		}),
+		new SidePanelSection({
+			$data: {
+				title: 'Usage'
+			}
+		}),
+		new SidePanelSection({
+			$data: {
+				title: 'Components'
+			}
+		}),
+		new SidePanelSection({
+			$data: {
+				title: 'About'
+			},
+			items: [
+				new SidePanelItem({
+					$data: {
+						title: 'Author'
+					},
+					$methods: {
+						click() {
+							window.open('https://ccoooss.com')
+						}
+					}
+				}),
+				new SidePanelItem({
+					$data: {
+						title: 'TheNeuronProject'
+					},
+					$methods: {
+						click() {
+							window.open('https://github.com/TheNeuronProject')
+						}
+					}
+				}),
+				new SidePanelItem({
+					$data: {
+						title: 'Donate'
+					},
+					$methods: {
+						click() {
+							window.open('https://www.patreon.com/classicoldsong')
+						}
+					}
+				})
+			]
+		})
+	]
+})
 body.contents.push(LP, footer, header, SP)
 header.left.push(logo)
 body.$mount({target: document.body, option: 'replace'})

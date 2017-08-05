@@ -6,7 +6,7 @@ import 'normalize.css'
 import './global.css'
 
 // Add fonts
-const fonts = ['Megrim', 'PT Sans', 'Material Icons']
+const fonts = ['Megrim', 'Abel', 'Material Icons']
 
 const fontLink = document.createElement('link')
 fontLink.rel = 'stylesheet'

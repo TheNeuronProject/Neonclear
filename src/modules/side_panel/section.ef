@@ -1,0 +1,5 @@
+>section
+	>h3
+		.{{title = Section Title}}
+	>ul
+		+items

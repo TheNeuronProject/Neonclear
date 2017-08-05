@@ -1,0 +1,4 @@
+>li
+	@click = click
+	>span
+		.{{title = Item Title}}
