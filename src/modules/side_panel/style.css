@@ -78,12 +78,14 @@ $framecolor: #88888888;
 		padding-left: 16px;
 		box-sizing: border-box;
 		list-style: none;
+		position: relative;
 		li {
 			font-weight: lighter;
 			cursor: pointer;
 			margin: 8px 0;
 			span {
 				position: relative;
+				display: inline-block;
 				&:after {
 					content: '';
 					width: 0;

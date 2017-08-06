@@ -35,3 +35,8 @@ html {
 	cursor: default;
 	margin-left: 50px;
 }
+
+.page {
+	backdrop-filter: blur(10px);
+	background: rgba(0,0,0,.5);
+}

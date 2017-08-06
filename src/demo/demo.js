@@ -1,6 +1,6 @@
 // Import basic elements
 import {
-	inform, exec, Body, Header, TextLogo, LogoButton,
+	inform, exec, Body, Header, TextLogo, LogoButton, Page,
 	LogoPage, Footer, SidePanel, SidePanelSection, SidePanelItem
 } from '../neonclear.js'
 
@@ -41,6 +41,13 @@ const LP = new LogoPage({
 	},
 	logo: BL,
 	buttons: [buttonSoon, buttonGH]
+})
+const Page1 = new Page({
+	$data: {
+		class: {
+			names: style.page
+		}
+	}
 })
 const footer = new Footer({$data: {author: 'Yukino Song'}})
 const SP = new SidePanel({
@@ -111,7 +118,7 @@ const SP = new SidePanel({
 		})
 	]
 })
-body.contents.push(LP, footer, header, SP)
+body.contents.push(LP, Page1, footer, header, SP)
 header.left.push(logo)
 body.$mount({target: document.body, option: 'replace'})
 exec()
@@ -119,4 +126,4 @@ exec()
 const ls = `
 color: #0ddf79;
 `
-console.warn('%c[NEON]', ls, 'This is a DEMO build of Neonclear. Additional logics are included in this bundle. DO NOT use this build in your project.')
+console.warn('%c[NEON]', ls, 'This is a DEMO build of Neonclear. Additional contents are included in this bundle. DO NOT use this build in your project.')
