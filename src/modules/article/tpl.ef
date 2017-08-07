@@ -1,0 +1,10 @@
+Write your template here:
+>div.{{class.article}}
+	#id = {{id}}
+	>article
+		>h1
+			.{{title = Title}}
+		>div
+			.by {{author = Author}}, created {{time = 1990-1-1}}
+		>hr
+		+contents

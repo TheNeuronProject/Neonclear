@@ -1,12 +1,15 @@
 // Import basic elements
 import {
 	inform, exec, Body, Header, TextLogo, LogoButton, Page,
-	LogoPage, Footer, SidePanel, SidePanelSection, SidePanelItem
+	LogoPage, Footer, SidePanel, SidePanelSection, SidePanelItem,
+	Article
 } from '../neonclear.js'
 
 import Logo from './logo.ef'
 
 import style from './style.css'
+
+const author = 'Yukino Song'
 
 inform()
 const body = new Body()
@@ -47,9 +50,10 @@ const Page1 = new Page({
 		class: {
 			names: style.page
 		}
-	}
+	},
+	contents: [new Article({$data: {author, title: 'Create websites with minimal design.', time: '2017-8-7', id: 'intro'}})]
 })
-const footer = new Footer({$data: {author: 'Yukino Song'}})
+const footer = new Footer({$data: {author}})
 const SP = new SidePanel({
 	contents: [
 		new SidePanelSection({

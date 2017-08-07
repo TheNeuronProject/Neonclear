@@ -1,0 +1,21 @@
+/* Write the style of the module here.
+ * No manual namespace needed, it will be done automatically
+ */
+
+@import '../../variables.css';
+
+.article {
+	width: 100%;
+	position: relative;
+	article {
+		position: relative;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1000px;
+		padding: 10px;
+	}
+	hr {
+		border: none;
+		border-bottom: #88888888 1px solid;
+	}
+}

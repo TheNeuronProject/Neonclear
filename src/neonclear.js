@@ -24,6 +24,7 @@ export * from './modules/banner_logo'
 export * from './modules/page'
 export * from './modules/logo_page'
 export * from './modules/side_panel'
+export * from './modules/article'
 
 // Log style
 const ls = `
