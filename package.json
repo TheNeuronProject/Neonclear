@@ -49,7 +49,7 @@
     "shelljs": "^0.7.5"
   },
   "dependencies": {
-    "ef.js": "^0.3.3-alpha.7",
+    "ef.js": "^0.3.3-alpha.8",
     "normalize.css": "^7.0.0"
   }
 }
