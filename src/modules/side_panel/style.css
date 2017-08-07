@@ -111,6 +111,7 @@ $framecolor: #88888888;
 				top: 0;
 				left: 0;
 				transition: transform .2s, opacity .2s;
+				pointer-events: none;
 			}
 			&.active {
 				&:before {
