@@ -1,4 +1,4 @@
->li
+>li.{{style.activeClass}}
 	@click = click
 	>span
 		.{{title = Item Title}}

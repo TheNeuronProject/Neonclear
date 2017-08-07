@@ -1,25 +1,29 @@
 // Import basic elements
 import tpl from './tpl.ef'
-import classNames from './style.css'
+import style from './style.css'
+import { inform, exec } from 'ef.js'
 
-const methods = {
-	scrollTop() {
-		window.scrollTo(0, 0)
-	}
+
+const scrollTop = () => {
+	window.scrollTo(0, 0)
 }
 
-const template = class extends tpl {
+const Header = class extends tpl {
 	constructor(state) {
+		inform()
 		// Apply classes
-		const _state = Object.assign({}, state)
-		_state.$methods = Object.assign({}, methods, _state.$methods)
-		if (!_state.$data) _state.$data = {}
-		_state.$data.class = Object.assign({}, classNames, _state.$data.class)
-		super(_state)
-
+		super({
+			$data: {style},
+			$methods: {scrollTop}
+		})
 		// Write your pre-handle methods below
+
+		// Apply user state
+		this.$update(state)
+		// Trigger render
+		exec()
 	}
 }
 
 // Export the module
-export { template as Header }
+export { Header }

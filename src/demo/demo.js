@@ -14,16 +14,8 @@ const author = 'Yukino Song'
 inform()
 const body = new Body()
 const header = new Header()
-const logo = new TextLogo({
-	$data: {
-		class: style
-	}
-})
-const BL = new Logo({
-	$data: {
-		class: style
-	}
-})
+const logo = new TextLogo({$data: {style}})
+const BL = new Logo({$data: {style}})
 const buttonSoon = new LogoButton({$data: {caption: 'Coming Soon...'}})
 const buttonGH = new LogoButton({
 	$data: {
@@ -38,18 +30,14 @@ const buttonGH = new LogoButton({
 const LP = new LogoPage({
 	$data: {
 		caption: 'The ef.js based progressive UI framework',
-		class: {
-			names: style.demo
-		}
+		classes: style.demo
 	},
 	logo: BL,
 	buttons: [buttonSoon, buttonGH]
 })
 const Page1 = new Page({
 	$data: {
-		class: {
-			names: style.page
-		}
+		classes: style.page
 	},
 	contents: [new Article({$data: {author, title: 'Create websites with minimal design.', time: '2017-8-7', id: 'intro'}})]
 })
@@ -63,7 +51,8 @@ const SP = new SidePanel({
 			items: [
 				new SidePanelItem({
 					$data: {
-						title: 'ef.js'
+						title: 'ef.js',
+						active: true
 					},
 					$methods: {
 						click() {
@@ -126,6 +115,8 @@ body.contents.push(LP, Page1, footer, header, SP)
 header.left.push(logo)
 body.$mount({target: document.body, option: 'replace'})
 exec()
+
+window.$body = body
 
 const ls = `
 color: #0ddf79;

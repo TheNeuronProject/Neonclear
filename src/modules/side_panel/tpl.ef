@@ -1,14 +1,14 @@
 Write your template here:
->div.{{class.side_panel}}
+>div.{{style.side_panel}}
 	#tabindex = 0
-	>div.{{class.menu_button}}.{{class.retract}}
+	>div.{{style.menu_button}}.{{style.retract}}
 		#tabindex = 0
 		>i.material-icons
 			.menu
-	>div.{{class.menu_button}}.{{class.expand}}
+	>div.{{style.menu_button}}.{{style.expand}}
 		>i.material-icons
 			.menu
-	>div.{{class.holder}}
+	>div.{{style.holder}}
 		>h1
 			.{{title = Menu}}
 		+contents

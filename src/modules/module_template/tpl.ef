@@ -1,2 +1,2 @@
 Write your template here:
->div.{{class.something}}
+>div.{{style.something}}

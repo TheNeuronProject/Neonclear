@@ -83,6 +83,7 @@ $framecolor: #88888888;
 			font-weight: lighter;
 			cursor: pointer;
 			margin: 8px 0;
+			position: relative;
 			span {
 				position: relative;
 				display: inline-block;
@@ -95,6 +96,26 @@ $framecolor: #88888888;
 					left: 0;
 					background-color: #FFF;
 					transition: width .2s;
+				}
+			}
+			&:before {
+				content: '';
+				opacity: 0;
+				transform: translate3d(-16px, 5px, 0) rotate(45deg);
+				border-top: #FFF 3px solid;
+				border-right: #FFF 3px solid;
+				height: 8px;
+				width: 8px;
+				box-sizing: border-box;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: transform .2s, opacity .2s;
+			}
+			&.active {
+				&:before {
+					opacity: 1;
+					transform: translate3d(-14px, 5px, 0) rotate(45deg);
 				}
 			}
 			&:hover {

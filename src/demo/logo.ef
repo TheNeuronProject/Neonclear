@@ -1,2 +1,2 @@
->img.{{class.logo}}
+>img.{{style.logo}}
 	#src = ./logo.svg

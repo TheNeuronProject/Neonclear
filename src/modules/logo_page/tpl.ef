@@ -1,7 +1,7 @@
 Write your template here:
->section.{{class.page}}.{{class.names}}
+>section.{{style.page}}.{{classes}}
 	-logo
-	>p.{{class.caption}}
+	>p.{{style.caption}}
 		.{{caption}}
-	>div.{{class.buttons}}
+	>div.{{style.buttons}}
 		+buttons

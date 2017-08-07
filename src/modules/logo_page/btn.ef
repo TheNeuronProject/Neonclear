@@ -1,4 +1,4 @@
 Write your template here:
->div.{{class.button}}
+>div.{{style.button}}
 	@click = click
 	.{{caption = Caption}}

@@ -1,19 +1,21 @@
 // Import basic elements
 import tpl from './tpl.ef'
-import classNames from './style.css'
+import style from './style.css'
+import { inform, exec } from 'ef.js'
 
-const template = class extends tpl {
+const Footer = class extends tpl {
 	constructor(state) {
+		inform()
 		// Apply classes
-		const _state = Object.assign({}, state)
-		if (!_state.$data) _state.$data = {}
-		if (!_state.$data.year) _state.$data.year = (new Date()).getFullYear()
-		_state.$data.class = Object.assign({}, classNames, _state.$data.class)
-		super(_state)
-
+		super({$data: {style}})
 		// Write your pre-handle methods below
+
+		// Apply user state
+		this.$update(state)
+		// Trigger render
+		exec()
 	}
 }
 
 // Export the module
-export { template as Footer }
+export { Footer }

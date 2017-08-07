@@ -1,5 +1,5 @@
 Write your template here:
->div.{{class.article}}
+>div.{{style.article}}
 	#id = {{id}}
 	>article
 		>h1
