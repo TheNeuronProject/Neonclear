@@ -101,11 +101,11 @@ $framecolor: #88888888;
 			&:before {
 				content: '';
 				opacity: 0;
-				transform: translate3d(-16px, 5px, 0) rotate(45deg);
-				border-top: #FFF 3px solid;
-				border-right: #FFF 3px solid;
-				height: 8px;
-				width: 8px;
+				transform: translate3d(-15px, 6px, 0) rotate(45deg);
+				border-top: #FFF 2px solid;
+				border-right: #FFF 2px solid;
+				height: 6px;
+				width: 6px;
 				box-sizing: border-box;
 				position: absolute;
 				top: 0;
@@ -113,10 +113,10 @@ $framecolor: #88888888;
 				transition: transform .2s, opacity .2s;
 				pointer-events: none;
 			}
-			&.active {
+			&:hover {
 				&:before {
 					opacity: 1;
-					transform: translate3d(-14px, 5px, 0) rotate(45deg);
+					transform: translate3d(-12px, 6px, 0) rotate(45deg);
 				}
 			}
 			&:hover {

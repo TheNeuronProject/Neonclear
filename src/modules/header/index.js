@@ -11,7 +11,7 @@ const scrollTop = () => {
 const Header = class extends tpl {
 	constructor(state) {
 		inform()
-		// Apply classes
+		// Apply classes and methods
 		super({
 			$data: {style},
 			$methods: {scrollTop}

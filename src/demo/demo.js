@@ -70,7 +70,19 @@ const SP = new SidePanel({
 		new SidePanelSection({
 			$data: {
 				title: 'Components'
-			}
+			},
+			items: [
+				new SidePanelItem({
+					$data: {
+						title: 'bPlayer-ef'
+					},
+					$methods: {
+						click() {
+							window.open('https://bplayer-ef.ccoooss.com')
+						}
+					}
+				})
+			]
 		}),
 		new SidePanelSection({
 			$data: {
