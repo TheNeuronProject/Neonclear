@@ -113,7 +113,7 @@ $framecolor: #88888888;
 				transition: transform .2s, opacity .2s;
 				pointer-events: none;
 			}
-			&:hover {
+			&.active {
 				&:before {
 					opacity: 1;
 					transform: translate3d(-12px, 6px, 0) rotate(45deg);

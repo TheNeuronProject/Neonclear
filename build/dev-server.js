@@ -21,6 +21,7 @@ const reload = browserSync.reload
 const dest = `${devPath}/${bundle}`
 
 let cache = {}
+let buildID = 0
 
 const bundleWrite = (bundle) => {
 	console.log('[RD]', 'Writing bundle...')
@@ -28,16 +29,22 @@ const bundleWrite = (bundle) => {
 	bundle.write({ dest, moduleName, format, sourceMap })
 }
 
+const rebuild = () => {
+	buildID = 0
+	rollup({
+		entry,
+		plugins,
+		cache
+	})
+	.then(bundleWrite)
+	.then(reload)
+}
+
 const startWatch = () => {
 	watch('src', (filename) => {
 		console.log('[RD]', 'File changed:', filename)
-		rollup({
-			entry,
-			plugins,
-			cache
-		})
-		.then(bundleWrite)
-		.then(reload)
+		if (buildID) clearTimeout(buildID)
+		buildID = setTimeout(rebuild, 100)
 	})
 }
 
