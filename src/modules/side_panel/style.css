@@ -57,7 +57,7 @@ $framecolor: #88888888;
 	}
 	h3 {
 		position: relative;
-		&:after {
+		&::after {
 			content: '';
 			height: 2px;
 			width: 24px;
@@ -68,7 +68,7 @@ $framecolor: #88888888;
 			transition: width .2s;
 		}
 		&:hover {
-			&:after {
+			&::after {
 				width: 30px;
 			}
 		}
@@ -87,7 +87,7 @@ $framecolor: #88888888;
 			span {
 				position: relative;
 				display: inline-block;
-				&:after {
+				&::after {
 					content: '';
 					width: 0;
 					height: 2px;
@@ -98,7 +98,7 @@ $framecolor: #88888888;
 					transition: width .2s;
 				}
 			}
-			&:before {
+			&::before {
 				content: '';
 				opacity: 0;
 				transform: translate3d(-15px, 6px, 0) rotate(45deg);
@@ -113,14 +113,12 @@ $framecolor: #88888888;
 				transition: transform .2s, opacity .2s;
 				pointer-events: none;
 			}
-			&.active {
-				&:before {
-					opacity: 1;
-					transform: translate3d(-12px, 6px, 0) rotate(45deg);
-				}
+			&.active::before {
+				opacity: 1;
+				transform: translate3d(-12px, 6px, 0) rotate(45deg);
 			}
 			&:hover {
-				& span:after {
+				& span::after {
 					width: 100%;
 				}
 			}

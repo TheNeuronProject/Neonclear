@@ -3,7 +3,7 @@ import tpl from './tpl.ef'
 import style from './style.css'
 import { inform, exec } from 'ef.js'
 
-const template = class extends tpl {
+const TextLogo = class extends tpl {
 	constructor(state) {
 		inform()
 		// Apply classes
@@ -18,4 +18,4 @@ const template = class extends tpl {
 }
 
 // Export the module
-export { template as TextLogo }
+export { TextLogo }

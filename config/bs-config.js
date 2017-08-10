@@ -33,7 +33,7 @@ module.exports = {
         }
     },
     "logLevel": "info",
-    "logPrefix": "EF",
+    "logPrefix": "RD",
     "logConnections": false,
     "logFileChanges": true,
     "logSnippet": true,

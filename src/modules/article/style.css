@@ -7,14 +7,14 @@
 .article {
 	width: 100%;
 	position: relative;
-	article {
+	& article {
 		position: relative;
 		margin: 0 auto;
 		width: 100%;
 		max-width: 1200px;
 		padding: 10px;
 	}
-	hr {
+	& hr {
 		border: none;
 		border-bottom: #88888888 1px solid;
 	}
