@@ -1,7 +1,7 @@
 // Import basic elements
 import {
 	inform, exec, Body, Header, TextLogo, LogoButton, Page,
-	LogoPage, Footer, SidePanel, SidePanelSection, SidePanelItem,
+	LogoPage, Footer, Drawer, DrawerSection, DrawerItem,
 	Article
 } from '../neonclear.js'
 
@@ -42,14 +42,14 @@ const Page1 = new Page({
 	contents: [new Article({$data: {author, title: 'Create websites with minimal design.', time: '2017-8-7', id: 'intro'}})]
 })
 const footer = new Footer({$data: {author}})
-const SP = new SidePanel({
+const SP = new Drawer({
 	contents: [
-		new SidePanelSection({
+		new DrawerSection({
 			$data: {
 				title: 'Intro'
 			},
 			items: [
-				new SidePanelItem({
+				new DrawerItem({
 					$data: {
 						title: 'ef.js',
 						active: true
@@ -62,17 +62,17 @@ const SP = new SidePanel({
 				})
 			]
 		}),
-		new SidePanelSection({
+		new DrawerSection({
 			$data: {
 				title: 'Usage'
 			}
 		}),
-		new SidePanelSection({
+		new DrawerSection({
 			$data: {
 				title: 'Components'
 			},
 			items: [
-				new SidePanelItem({
+				new DrawerItem({
 					$data: {
 						title: 'bPlayer-ef'
 					},
@@ -84,12 +84,12 @@ const SP = new SidePanel({
 				})
 			]
 		}),
-		new SidePanelSection({
+		new DrawerSection({
 			$data: {
 				title: 'About'
 			},
 			items: [
-				new SidePanelItem({
+				new DrawerItem({
 					$data: {
 						title: 'Author'
 					},
@@ -99,7 +99,7 @@ const SP = new SidePanel({
 						}
 					}
 				}),
-				new SidePanelItem({
+				new DrawerItem({
 					$data: {
 						title: 'TheNeuronProject'
 					},
@@ -109,7 +109,7 @@ const SP = new SidePanel({
 						}
 					}
 				}),
-				new SidePanelItem({
+				new DrawerItem({
 					$data: {
 						title: 'Donate'
 					},

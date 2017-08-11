@@ -5,7 +5,7 @@ import item from './item.ef'
 import style from './style.css'
 import { inform, exec } from 'ef.js'
 
-const SidePanel = class extends tpl {
+const Drawer = class extends tpl {
 	constructor(state) {
 		inform()
 		// Apply classes
@@ -19,7 +19,7 @@ const SidePanel = class extends tpl {
 	}
 }
 
-const SidePanelSection = class extends section {
+const DrawerSection = class extends section {
 	constructor(state) {
 		inform()
 		// Apply classes
@@ -38,7 +38,7 @@ const makeActive = ({state: {$data}, value}) => {
 	else $data.style.activeClass = ''
 }
 
-const SidePanelItem = class extends item {
+const DrawerItem = class extends item {
 	constructor(state) {
 		inform()
 		// Apply classes
@@ -54,4 +54,4 @@ const SidePanelItem = class extends item {
 }
 
 // Export the module
-export { SidePanel, SidePanelSection, SidePanelItem }
+export { Drawer, DrawerSection, DrawerItem }
