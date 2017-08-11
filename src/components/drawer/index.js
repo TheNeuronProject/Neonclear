@@ -3,49 +3,25 @@ import tpl from './tpl.ef'
 import section from './section.ef'
 import item from './item.ef'
 import style from './style.css'
+import styled from '../../utils/styled.js'
 import { inform, exec } from 'ef.js'
 
-const Drawer = class extends tpl {
-	constructor(state) {
-		inform()
-		// Apply classes
-		super({$data: {style}})
-		// Write your pre-handle methods below
+const Drawer = styled(tpl, style)
 
-		// Apply user state
-		this.$update(state)
-		// Trigger render
-		exec()
-	}
-}
-
-const DrawerSection = class extends section {
-	constructor(state) {
-		inform()
-		// Apply classes
-		super({$data: {style}})
-		// Write your pre-handle methods below
-
-		// Apply user state
-		this.$update(state)
-		// Trigger render
-		exec()
-	}
-}
+const DrawerSection = styled(section, style)
 
 const makeActive = ({state: {$data}, value}) => {
 	if (value) $data.style.activeClass = style.active
 	else $data.style.activeClass = ''
 }
 
-const DrawerItem = class extends item {
+const DrawerItem = class extends styled(item, style) {
 	constructor(state) {
 		inform()
-		// Apply classes
-		super({$data: {style}})
-		// Write your pre-handle methods below
+		// Init component
+		super()
+		// Make subscriptions
 		this.$subscribe('active', makeActive)
-
 		// Apply user state
 		this.$update(state)
 		// Trigger render

@@ -4,6 +4,8 @@ import { version } from '../package.json'
 import 'normalize.css'
 // Import global style
 import './global.css'
+// Import utilities
+import styled from './utils/styled.js'
 
 // Add fonts
 const fonts = ['Megrim', 'Abel', 'Material Icons']
@@ -25,6 +27,9 @@ export * from './components/page'
 export * from './components/logo_page'
 export * from './components/drawer'
 export * from './components/article'
+
+// Export utilities
+export { styled }
 
 // Log style
 const ls = `
