@@ -44,7 +44,7 @@ const startWatch = () => {
 	watch('src', (filename) => {
 		console.log('[RD]', 'File changed:', filename)
 		if (buildID) clearTimeout(buildID)
-		buildID = setTimeout(rebuild, 100)
+		buildID = setTimeout(rebuild, 200)
 	})
 }
 
