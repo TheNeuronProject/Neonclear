@@ -35,14 +35,14 @@ const LP = new LogoPage({
 	logo: BL,
 	buttons: [buttonSoon, buttonGH]
 })
-const Page1 = new Page({
+const page1 = new Page({
 	$data: {
 		classes: style.page
 	},
 	contents: [new Article({$data: {author, title: 'Create websites with minimal design.', time: '2017-8-7', id: 'intro'}})]
 })
 const footer = new Footer({$data: {author}})
-const SP = new Drawer({
+const drawer = new Drawer({
 	contents: [
 		new DrawerSection({
 			$data: {
@@ -123,7 +123,7 @@ const SP = new Drawer({
 		})
 	]
 })
-body.contents.push(LP, Page1, footer, header, SP)
+body.contents.push(LP, page1, footer, header, drawer)
 header.left.push(logo)
 body.$mount({target: document.body, option: 'replace'})
 exec()
