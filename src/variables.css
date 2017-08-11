@@ -1,5 +1,3 @@
 :root {
-	--color-left: #b200fb;
-	--color-right: #6f00e8;
-	--color-shadow: rgba(201, 69, 255, 0.5);
+	--gradient-90: linear-gradient(90deg, $colorLeft, $colorRight);
 }

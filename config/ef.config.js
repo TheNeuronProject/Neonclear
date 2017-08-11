@@ -1,14 +1,9 @@
-module.exports = {
-	entry: 'src/neonclear.js',
-	bundle: 'neonclear.js',
-	assets: 'src/assets',
+export default {
+	input: 'src/neonclear.js',
+	name: 'neon',
+	bundle: 'neonclear',
 	devPath: 'test',
 	proPath: 'dist',
-	limit: 10240,
-	b64svg: false,
-	format: 'umd',
-	moduleName: 'neon',
-	sourceMap: true,
 	extract: false,
 	combineStyleTags: true
 }

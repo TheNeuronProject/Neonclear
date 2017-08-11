@@ -1,11 +1,13 @@
 // Import basic elements
 import {
-	inform, exec, Body, Header, TextLogo, LogoButton, Page,
-	LogoPage, Footer, SidePanel, SidePanelSection, SidePanelItem,
-	Article
+	Body, Header, TextLogo, LogoButton, Page,
+	LogoPage, Footer, Drawer, DrawerSection, DrawerItem
 } from '../neonclear.js'
 
-import Logo from './logo.ef'
+import {inform, exec} from 'ef-core'
+
+import Logo from './components/logo'
+import Section from './components/section'
 
 import style from './style.css'
 
@@ -13,9 +15,9 @@ const author = 'Yukino Song'
 
 inform()
 const body = new Body()
-const header = new Header()
-const logo = new TextLogo({$data: {style}})
-const BL = new Logo({$data: {style}})
+const header = new Header({$data: {style: {classes: style.header}}})
+const logo = new TextLogo('Neonclear')
+const BL = new Logo()
 const buttonSoon = new LogoButton({$data: {caption: 'Coming Soon...'}})
 const buttonGH = new LogoButton({
 	$data: {
@@ -35,21 +37,21 @@ const LP = new LogoPage({
 	logo: BL,
 	buttons: [buttonSoon, buttonGH]
 })
-const Page1 = new Page({
+const page1 = new Page({
 	$data: {
 		classes: style.page
 	},
-	contents: [new Article({$data: {author, title: 'Create websites with minimal design.', time: '2017-8-7', id: 'intro'}})]
+	contents: [new Section({$data: {title: 'Create websites with minimal design.', id: 'intro'}})]
 })
-const footer = new Footer({$data: {author}})
-const SP = new SidePanel({
+const footer = new Footer(author)
+const drawer = new Drawer({
 	contents: [
-		new SidePanelSection({
+		new DrawerSection({
 			$data: {
 				title: 'Intro'
 			},
 			items: [
-				new SidePanelItem({
+				new DrawerItem({
 					$data: {
 						title: 'ef.js',
 						active: true
@@ -62,17 +64,17 @@ const SP = new SidePanel({
 				})
 			]
 		}),
-		new SidePanelSection({
+		new DrawerSection({
 			$data: {
 				title: 'Usage'
 			}
 		}),
-		new SidePanelSection({
+		new DrawerSection({
 			$data: {
 				title: 'Components'
 			},
 			items: [
-				new SidePanelItem({
+				new DrawerItem({
 					$data: {
 						title: 'bPlayer-ef'
 					},
@@ -84,12 +86,12 @@ const SP = new SidePanel({
 				})
 			]
 		}),
-		new SidePanelSection({
+		new DrawerSection({
 			$data: {
 				title: 'About'
 			},
 			items: [
-				new SidePanelItem({
+				new DrawerItem({
 					$data: {
 						title: 'Author'
 					},
@@ -99,7 +101,7 @@ const SP = new SidePanel({
 						}
 					}
 				}),
-				new SidePanelItem({
+				new DrawerItem({
 					$data: {
 						title: 'TheNeuronProject'
 					},
@@ -109,7 +111,7 @@ const SP = new SidePanel({
 						}
 					}
 				}),
-				new SidePanelItem({
+				new DrawerItem({
 					$data: {
 						title: 'Donate'
 					},
@@ -123,7 +125,7 @@ const SP = new SidePanel({
 		})
 	]
 })
-body.contents.push(LP, Page1, footer, header, SP)
+body.contents.push(LP, page1, footer, header, drawer)
 header.left.push(logo)
 body.$mount({target: document.body, option: 'replace'})
 exec()

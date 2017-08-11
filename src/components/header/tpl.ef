@@ -1,0 +1,7 @@
+>header.{{style.header}}
+	@dblclick = scrollTop
+	>div.{{style.container}}.{{style.classes}}
+		>div.{{style.left}}
+			+left
+		-middle
+		-right

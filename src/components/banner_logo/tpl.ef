@@ -1,0 +1,3 @@
+Write your template here:
+>div.{{style.banner_logo}}
+	.{{text}}

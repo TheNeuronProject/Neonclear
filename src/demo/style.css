@@ -12,8 +12,8 @@ html {
 }
 
 .demo {
-	p {
-		background: linear-gradient(90deg, var(--color-left), var(--color-right));
+	& p {
+		background: var(--gradient-90);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
@@ -21,23 +21,24 @@ html {
 
 .logo {
 	max-width: 600px;
-	filter: drop-shadow(0 5px 10px var(--color-shadow));
+	height: auto;
+	filter: drop-shadow(0 5px 10px $colorShadow);
 }
 
-.text_logo {
-	height: 100%;
-	font-size: 40px;
-	font-family: 'Megrim', cursive;
-	background: linear-gradient(90deg, var(--color-left), var(--color-right));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	user-select: none;
-	cursor: default;
-	margin-left: 50px;
+.header {
+	padding-left: 50px;
 }
 
 .page {
 	backdrop-filter: blur(10px);
 	background: rgba(0,0,0,.5);
 	color: #FFF;
+}
+
+.section {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	max-width:  1200px;
+	padding: 0 10px;
 }

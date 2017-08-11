@@ -1,0 +1,46 @@
+/* Write the style of the module here.
+ * No manual namespace needed, it will be done automatically
+ */
+
+@import '../../variables.css';
+
+.header {
+	height: 60px;
+	width: 100%;
+	border: 0;
+	border-bottom: 2px solid;
+	border-image: var(--gradient-90);
+	border-image-slice: 1;
+	box-shadow: $colorShadow 0px 2px 4px;
+	font-family: 'PT Sans Narrow', sans-serif;
+	position: relative;
+	top: 0;
+	line-height: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		backdrop-filter: blur(20px);
+		background: hsla(0, 0%, 100%, .7);
+		z-index: -1;
+	}
+}
+
+.left {
+	float: left;
+	height: 100%;
+	padding-left: 10px;
+}
+
+.container {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+}

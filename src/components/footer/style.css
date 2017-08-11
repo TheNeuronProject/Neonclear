@@ -1,0 +1,44 @@
+/* Write the style of the module here.
+ * No manual namespace needed, it will be done automatically
+ */
+
+@import '../../variables.css';
+
+.footer {
+	height: 150px;
+	border: 0;
+	border-bottom: 2px solid;
+	border-image: var(--gradient-90);
+	border-image-slice: 1;
+	box-shadow: #FFFFFF33 0px -2px 4px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	& a {
+		color: #000;
+		text-decoration: none;
+		background: var(--gradient-90);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		backdrop-filter: blur(20px);
+		background: hsla(0,0%,100%,.7);
+		z-index: -1;
+	}
+}
+
+.copyright {
+	text-align: center;
+	flex-grow: 0;
+	min-height: 18px;
+	line-height: 18px;
+	font-size: 14px;
+}

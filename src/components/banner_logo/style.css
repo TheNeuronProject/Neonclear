@@ -1,0 +1,20 @@
+/* Write the style of the module here.
+ * No manual namespace needed, it will be done automatically
+ */
+
+@import '../../variables.css';
+
+.banner_logo {
+	height: 100px;
+	width: 460px;
+	max-width: 100%;
+	font-size: 80px;
+	line-height: 100px;
+	text-align: center;
+	font-family: 'Megrim', cursive;
+	background: var(--gradient-90);
+	color: #FFF;
+	user-select: none;
+	cursor: default;
+	overflow: hidden;
+}

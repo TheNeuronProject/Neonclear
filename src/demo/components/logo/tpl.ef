@@ -1,0 +1,78 @@
+>svg.{{style.logo}}
+	#width = 100%
+	#height = 100%
+	#viewBox = 0 0 2048 1024
+	#version = 1.1
+	#xmlns = http://www.w3.org/2000/svg
+	#xmlns:xlink = http://www.w3.org/1999/xlink
+	#xml:space = preserve
+	#style = fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;
+	>path
+		#d = M645.657,133.657l-567.514,567.514l189.172,189.172l567.514,-567.514l-189.172,-189.172Z
+		#style = fill:url(#_Linear1);
+	>path
+		#d = M1213.17,133.657l-567.514,567.514l189.172,189.172l567.514,-567.514l-189.172,-189.172Z
+		#style = fill:url(#_Linear2);
+	>path
+		#d = M1496.93,606.586l283.757,283.757l189.172,-189.172l-283.757,-283.757l-189.172,189.172Z
+		#style = fill:url(#_Linear3);
+	>path
+		#d = M1780.68,133.657l-378.342,378.343l189.171,189.171l378.343,-378.342l-189.172,-189.172Z
+		#style = fill:url(#_Linear4);
+	>defs
+		>linearGradient
+			#id = _Linear1
+			#x1 = 0
+			#y1 = 0
+			#x2 = 1
+			#y2 = 0
+			#gradientUnits = userSpaceOnUse
+			#gradientTransform = matrix(567.514,-567.514,189.171,189.171,172.729,795.757)
+			>stop
+				#offset = 0
+				#style = stop-color:{{colorLeft = #00fffa}};stop-opacity:1
+			>stop
+				#offset = 1
+				#style = stop-color:{{colorRight = #00b9ee}};stop-opacity:1
+		>linearGradient
+			#id = _Linear2
+			#x1 = 0
+			#y1 = 0
+			#x2 = 1
+			#y2 = 0
+			#gradientUnits = userSpaceOnUse
+			#gradientTransform = matrix(567.514,-567.514,189.171,189.171,740.243,795.757)
+			>stop
+				#offset = 0
+				#style = stop-color:{{colorLeft}};stop-opacity:1
+			>stop
+				#offset = 1
+				#style = stop-color:{{colorRight}};stop-opacity:1
+		>linearGradient
+			#id = _Linear3
+			#x1 = 0
+			#y1 = 0
+			#x2 = 1
+			#y2 = 0
+			#gradientUnits = userSpaceOnUse
+			#gradientTransform = matrix(-283.757,-283.757,189.171,-189.171,1875.27,795.757)
+			>stop
+				#offset = 0
+				#style = stop-color:{{colorLeft}};stop-opacity:1
+			>stop
+				#offset = 1
+				#style = stop-color:{{colorRight}};stop-opacity:1
+		>linearGradient
+			#id = _Linear4
+			#x1 = 0
+			#y1 = 0
+			#x2 = 1
+			#y2 = 0
+			#gradientUnits = userSpaceOnUse
+			#gradientTransform = matrix(378.343,-378.343,189.171,189.171,1496.93,606.586)
+			>stop
+				#offset = 0
+				#style = stop-color:{{colorLeft}};stop-opacity:1
+			>stop
+				#offset = 1
+				#style = stop-color:{{colorRight}};stop-opacity:1

@@ -1,3 +1,0 @@
-Write your template here:
->div.{{style.text_logo}}.{{style.names}}
-	.{{text = Neonclear}}

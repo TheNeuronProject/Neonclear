@@ -1,0 +1,7 @@
+Write your template here:
+>div.{{style.section}}
+	#id = {{id}}
+	>article
+		>h1
+			.{{title = Title}}
+		+contents

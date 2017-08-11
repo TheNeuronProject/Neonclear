@@ -4,6 +4,8 @@ import { version } from '../package.json'
 import 'normalize.css'
 // Import global style
 import './global.css'
+// Import utilities
+import styled from './utils/styled.js'
 
 // Add fonts
 const fonts = ['Megrim', 'Abel', 'Material Icons']
@@ -13,18 +15,19 @@ fontLink.rel = 'stylesheet'
 fontLink.href = `https://fonts.googleapis.com/css?family=${fonts.map(item => item.replace(/\s/g, '+')).join('|')}`
 ;(document.head || document.getElementsByTagName('head')[0]).appendChild(fontLink)
 
-// Export ef
-export * from 'ef.js'
 // Export every module
-export * from './modules/body'
-export * from './modules/header'
-export * from './modules/footer'
-export * from './modules/text_logo'
-export * from './modules/banner_logo'
-export * from './modules/page'
-export * from './modules/logo_page'
-export * from './modules/side_panel'
-export * from './modules/article'
+export * from './components/body'
+export * from './components/header'
+export * from './components/footer'
+export * from './components/text_logo'
+export * from './components/banner_logo'
+export * from './components/page'
+export * from './components/logo_page'
+export * from './components/drawer'
+export * from './components/article'
+
+// Export utilities
+export { styled }
 
 // Log style
 const ls = `
