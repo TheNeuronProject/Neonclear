@@ -41,7 +41,7 @@ const rebuild = () => {
 }
 
 const startWatch = () => {
-	watch('src', (evt, filename) => {
+	watch('src', { recursive: true }, (evt, filename) => {
 		console.log('[RD]', 'File changed:', filename)
 		if (buildID) clearTimeout(buildID)
 		buildID = setTimeout(rebuild, 200)

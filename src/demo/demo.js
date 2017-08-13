@@ -1,11 +1,11 @@
 // Import basic elements
 import {
 	inform, exec, Body, Header, TextLogo, LogoButton, Page,
-	LogoPage, Footer, Drawer, DrawerSection, DrawerItem,
-	Article
+	LogoPage, Footer, Drawer, DrawerSection, DrawerItem
 } from '../neonclear.js'
 
-import Logo from './logo.ef'
+import Logo from './components/logo'
+import Section from './components/section'
 
 import style from './style.css'
 
@@ -15,7 +15,7 @@ inform()
 const body = new Body()
 const header = new Header()
 const logo = new TextLogo({$data: {style}})
-const BL = new Logo({$data: {style}})
+const BL = new Logo()
 const buttonSoon = new LogoButton({$data: {caption: 'Coming Soon...'}})
 const buttonGH = new LogoButton({
 	$data: {
@@ -39,7 +39,7 @@ const page1 = new Page({
 	$data: {
 		classes: style.page
 	},
-	contents: [new Article({$data: {author, title: 'Create websites with minimal design.', time: '2017-8-7', id: 'intro'}})]
+	contents: [new Section({$data: {title: 'Create websites with minimal design.', id: 'intro'}})]
 })
 const footer = new Footer({$data: {author}})
 const drawer = new Drawer({

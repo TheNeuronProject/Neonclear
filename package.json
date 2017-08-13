@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ClassicOldSong/Neonclear.git"
+    "url": "git+https://github.com/TheNeuronProject/Neonclear.git"
   },
   "keywords": [
     "template",
@@ -21,9 +21,9 @@
   "author": "ClassicOldSong",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ClassicOldSong/Neonclear/issues"
+    "url": "https://github.com/TheNeuronProject/Neonclear/issues"
   },
-  "homepage": "https://github.com/ClassicOldSong/Neonclear#readme",
+  "homepage": "https://neon.atm.re",
   "devDependencies": {
     "browser-sync": "^2.17.5",
     "cssnano": "^3.10.0",
@@ -49,7 +49,7 @@
     "shelljs": "^0.7.5"
   },
   "dependencies": {
-    "ef.js": "^0.3.4-beta.1",
+    "ef.js": "^0.3.4-beta.2",
     "normalize.css": "^7.0.0"
   }
 }
