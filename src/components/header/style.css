@@ -27,14 +27,20 @@
 		height: 100%;
 		width: 100%;
 		backdrop-filter: blur(20px);
-		background: hsla(0,0%,100%,.7);
+		background: hsla(0, 0%, 100%, .7);
 		z-index: -1;
 	}
 }
 
 .left {
-	position: absolute;
-	left: 0;
+	float: left;
 	height: 100%;
 	padding-left: 10px;
+}
+
+.container {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
 }

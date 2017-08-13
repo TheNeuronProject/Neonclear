@@ -3,7 +3,13 @@ import tpl from './tpl.ef'
 import style from './style.css'
 import styled from '../../utils/styled.js'
 
-const BannerLogo = styled(tpl, style)
+const BannerLogo = class extends styled(tpl, style) {
+	constructor(text) {
+		super({
+			$data: {text}
+		})
+	}
+}
 
 // Export the module
 export { BannerLogo }

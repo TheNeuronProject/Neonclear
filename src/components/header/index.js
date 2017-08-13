@@ -4,7 +4,6 @@ import style from './style.css'
 import styled from '../../utils/styled.js'
 import { inform, exec } from 'ef.js'
 
-
 const scrollTop = () => {
 	window.scrollTo(0, 0)
 }

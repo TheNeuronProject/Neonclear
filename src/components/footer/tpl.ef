@@ -1,7 +1,7 @@
 Write your template here:
 >footer.{{style.footer}}
 	>p.{{style.copyright}}
-		.Copyright © {{year}} {{author = Author}}
+		.Copyright © {{year}} {{author}}
 		>br
 		.Built with &
 		>b

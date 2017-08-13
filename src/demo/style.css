@@ -24,16 +24,8 @@ html {
 	filter: drop-shadow(0 5px 10px var(--color-shadow));
 }
 
-.text_logo {
-	height: 100%;
-	font-size: 40px;
-	font-family: 'Megrim', cursive;
-	background: linear-gradient(90deg, var(--color-left), var(--color-right));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	user-select: none;
-	cursor: default;
-	margin-left: 50px;
+.header {
+	padding-left: 50px;
 }
 
 .page {

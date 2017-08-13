@@ -13,8 +13,8 @@ const author = 'Yukino Song'
 
 inform()
 const body = new Body()
-const header = new Header()
-const logo = new TextLogo({$data: {style}})
+const header = new Header({$data: {style: {classes: style.header}}})
+const logo = new TextLogo('Neonclear')
 const BL = new Logo()
 const buttonSoon = new LogoButton({$data: {caption: 'Coming Soon...'}})
 const buttonGH = new LogoButton({
@@ -41,7 +41,7 @@ const page1 = new Page({
 	},
 	contents: [new Section({$data: {title: 'Create websites with minimal design.', id: 'intro'}})]
 })
-const footer = new Footer({$data: {author}})
+const footer = new Footer(author)
 const drawer = new Drawer({
 	contents: [
 		new DrawerSection({
