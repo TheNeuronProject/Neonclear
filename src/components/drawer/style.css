@@ -6,7 +6,7 @@
 
 $framecolor: #88888888;
 
-.side_panel {
+.drawer {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -18,7 +18,7 @@ $framecolor: #88888888;
 	transition: transform cubic-bezier(0.18, 0.89, 0.32, 1.06) .5s;
 	background: linear-gradient(-30deg, #000, #333);
 	outline: none;
-	.menu_button {
+	& .menu_button {
 		position: absolute;
 		box-sizing: border-box;
 		top: 10px;
@@ -31,7 +31,7 @@ $framecolor: #88888888;
 		user-select: none;
 		cursor: pointer;
 		transition: transform cubic-bezier(0.18, 0.89, 0.32, 0.92) .5s;
-		i {
+		& i {
 			height: 100%;
 			line-height: 36px;
 			width: 100%;
@@ -45,7 +45,7 @@ $framecolor: #88888888;
 	}
 	&:focus {
 		transform: translate3d(-20px, 0, 0);
-		.menu_button {
+		& .menu_button {
 			transform: translate3d(0, 0, 0);
 			&.expand {
 				visibility: hidden;
@@ -55,7 +55,7 @@ $framecolor: #88888888;
 			}
 		}
 	}
-	h3 {
+	& h3 {
 		position: relative;
 		&::after {
 			content: '';
@@ -64,7 +64,7 @@ $framecolor: #88888888;
 			position: absolute;
 			bottom: -5px;
 			left: 0;
-			background: linear-gradient(90deg, var(--color-left), var(--color-right));
+			background: var(--gradient-90);
 			transition: width .2s;
 		}
 		&:hover {
@@ -73,18 +73,18 @@ $framecolor: #88888888;
 			}
 		}
 	}
-	ul {
+	& ul {
 		width: 100%;
 		padding-left: 16px;
 		box-sizing: border-box;
 		list-style: none;
 		position: relative;
-		li {
+		& li {
 			font-weight: lighter;
 			cursor: pointer;
 			margin: 8px 0;
 			position: relative;
-			span {
+			& span {
 				position: relative;
 				display: inline-block;
 				&::after {
@@ -131,14 +131,14 @@ $framecolor: #88888888;
 	padding: 0 20px 0 30px;
 	color: #FFF;
 	box-sizing: border-box;
-	h1 {
+	& h1 {
 		display: inline-block;
 		margin: 0;
 		height: 60px;
 		line-height: 60px;
-		background: linear-gradient(90deg, var(--color-left), var(--color-right));
+		background: var(--gradient-90);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		text-shadow: var(--color-shadow) 0px 2px 3px;
+		text-shadow: $colorShadow 0px 2px 3px;
 	}
 }

@@ -1,5 +1,5 @@
 Write your template here:
->div.{{style.side_panel}}
+>div.{{style.drawer}}
 	#tabindex = 0
 	>div.{{style.menu_button}}.{{style.retract}}
 		#tabindex = 0

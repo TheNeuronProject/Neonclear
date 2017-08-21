@@ -9,9 +9,9 @@
 	width: 100%;
 	border: 0;
 	border-bottom: 2px solid;
-	border-image: linear-gradient(90deg, var(--color-left), var(--color-right));
+	border-image: var(--gradient-90);
 	border-image-slice: 1;
-	box-shadow: var(--color-shadow) 0px 2px 4px;
+	box-shadow: $colorShadow 0px 2px 4px;
 	font-family: 'PT Sans Narrow', sans-serif;
 	position: relative;
 	top: 0;

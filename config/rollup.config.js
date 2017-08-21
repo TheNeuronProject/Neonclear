@@ -21,6 +21,9 @@ const postcssimport = require('postcss-import')
 const cssnano = require('cssnano')
 const imageInliner = require('postcss-image-inliner')
 
+// CSS variables
+const colors = require('./colors.config.js')
+
 // ef configuration
 const {
 	entry = 'src/main.js',
@@ -90,7 +93,7 @@ module.exports = {
 		eft(),
 		postcss({
 			plugins: [
-				simplevars(),
+				simplevars({ variables: colors }),
 				nested(),
 				cssnext({ warnForDuplicates: false }),
 				postcssimport(),

@@ -12,8 +12,8 @@ html {
 }
 
 .demo {
-	p {
-		background: linear-gradient(90deg, var(--color-left), var(--color-right));
+	& p {
+		background: var(--gradient-90);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
@@ -21,7 +21,8 @@ html {
 
 .logo {
 	max-width: 600px;
-	filter: drop-shadow(0 5px 10px var(--color-shadow));
+	height: auto;
+	filter: drop-shadow(0 5px 10px $colorShadow);
 }
 
 .header {

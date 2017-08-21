@@ -8,7 +8,7 @@
 	height: 150px;
 	border: 0;
 	border-bottom: 2px solid;
-	border-image: linear-gradient(90deg, var(--color-left), var(--color-right));
+	border-image: var(--gradient-90);
 	border-image-slice: 1;
 	box-shadow: #FFFFFF33 0px -2px 4px;
 	position: relative;
@@ -18,7 +18,7 @@
 	& a {
 		color: #000;
 		text-decoration: none;
-		background: linear-gradient(90deg, var(--color-left), var(--color-right));
+		background: var(--gradient-90);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}

@@ -12,7 +12,7 @@
 	line-height: 100px;
 	text-align: center;
 	font-family: 'Megrim', cursive;
-	background: linear-gradient(90deg, var(--color-left), var(--color-right));
+	background: var(--gradient-90);
 	color: #FFF;
 	user-select: none;
 	cursor: default;
