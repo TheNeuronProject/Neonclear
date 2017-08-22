@@ -15,7 +15,7 @@ inform()
 const body = new Body()
 const header = new Header({$data: {style: {classes: style.header}}})
 const logo = new TextLogo('Neonclear')
-const BL = new Logo('#00fffa', '#00b9ee')
+const BL = new Logo()
 const buttonSoon = new LogoButton({$data: {caption: 'Coming Soon...'}})
 const buttonGH = new LogoButton({
 	$data: {

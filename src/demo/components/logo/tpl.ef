@@ -7,23 +7,18 @@
 	#xmlns:xlink = http://www.w3.org/1999/xlink
 	#xml:space = preserve
 	#style = fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;
-	>g
-		>g
-			#id = N
-			>path
-				#d = M645.657,133.657l-567.514,567.514l189.172,189.172l567.514,-567.514l-189.172,-189.172Z
-				#style = fill:url(#_Linear1);
-			>path
-				#d = M1213.17,133.657l-567.514,567.514l189.172,189.172l567.514,-567.514l-189.172,-189.172Z
-				#style = fill:url(#_Linear2);
-		>g
-			#id = C
-			>path
-				#d = M1496.93,606.586l283.757,283.757l189.172,-189.172l-283.757,-283.757l-189.172,189.172Z
-				#style = fill:url(#_Linear3);
-			>path
-				#d = M1780.68,133.657l-378.342,378.343l189.171,189.171l378.343,-378.342l-189.172,-189.172Z
-				#style = fill:url(#_Linear4);
+	>path
+		#d = M645.657,133.657l-567.514,567.514l189.172,189.172l567.514,-567.514l-189.172,-189.172Z
+		#style = fill:url(#_Linear1);
+	>path
+		#d = M1213.17,133.657l-567.514,567.514l189.172,189.172l567.514,-567.514l-189.172,-189.172Z
+		#style = fill:url(#_Linear2);
+	>path
+		#d = M1496.93,606.586l283.757,283.757l189.172,-189.172l-283.757,-283.757l-189.172,189.172Z
+		#style = fill:url(#_Linear3);
+	>path
+		#d = M1780.68,133.657l-378.342,378.343l189.171,189.171l378.343,-378.342l-189.172,-189.172Z
+		#style = fill:url(#_Linear4);
 	>defs
 		>linearGradient
 			#id = _Linear1
@@ -35,10 +30,10 @@
 			#gradientTransform = matrix(567.514,-567.514,189.171,189.171,172.729,795.757)
 			>stop
 				#offset = 0
-				#style = stop-color:{{colorLeft = #b200ff}};stop-opacity:1
+				#style = stop-color:{{colorLeft = #00fffa}};stop-opacity:1
 			>stop
 				#offset = 1
-				#style = stop-color:{{colorRight = #6f00e8}};stop-opacity:1
+				#style = stop-color:{{colorRight = #00b9ee}};stop-opacity:1
 		>linearGradient
 			#id = _Linear2
 			#x1 = 0
