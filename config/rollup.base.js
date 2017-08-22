@@ -36,31 +36,31 @@ const {
 	combineStyleTags
 } = efConfig
 
-console.log('Target:', chalk.bold.green(process.env.NODE_ENV || 'development'))
 // Log build environment
+console.log('Target:', chalk.bold.green(process.env.NODE_ENV || 'development'))
 switch (process.env.BUILD_ENV) {
 	case 'DEMO': {
-		console.log(chalk.bgCyan.black(`
+		console.log(chalk.cyan`
 +------------+
 | DEMO BUILD |
 +------------+
-`))
+`)
 		break
 	}
 	case 'CI': {
-		console.log(chalk.bgGreen.black(`
+		console.log(chalk.green`
 +----------+
 | CI BUILD |
 +----------+
-`))
+`)
 		break
 	}
 	default: {
-		console.log(chalk.bgYellow.black(`
+		console.log(chalk.yellow`
 +--------------+
 | NORMAL BUILD |
 +--------------+
-`))
+`)
 	}
 }
 
