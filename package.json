@@ -2,11 +2,12 @@
   "name": "neonclear",
   "version": "0.1.0-alpha.0",
   "description": "An ef-based frontend UI library",
-  "main": "dist/neonclear.js",
+  "main": "dist/neonclear.full.js",
   "module": "src/neonclear.js",
+  "unpkg": "dist/neonclear.js",
   "scripts": {
     "dev": "BUILD_ENV=DEMO rollup -c ./config/rollup.dev.js -w",
-    "build": "NODE_ENV=production rollup -c ./config/rollup.build.js",
+    "build": "NODE_ENV=production rollup -c ./config/rollup.prod.js",
     "lint": "eslint --ext .js src"
   },
   "repository": {
@@ -26,7 +27,6 @@
   },
   "homepage": "https://neon.atm.re",
   "devDependencies": {
-    "browser-sync": "^2.18.13",
     "chalk": "^2.1.0",
     "chokidar": "^1.7.0",
     "cssnano": "^3.10.0",

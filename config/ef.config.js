@@ -1,11 +1,7 @@
 export default {
 	input: 'src/neonclear.js',
-	output: {
-		name: 'neon',
-		format: 'umd',
-		sourcemap: true
-	},
-	bundle: 'neonclear.js',
+	name: 'neon',
+	bundle: 'neonclear',
 	devPath: 'test',
 	proPath: 'dist',
 	extract: false,

@@ -15,8 +15,6 @@ fontLink.rel = 'stylesheet'
 fontLink.href = `https://fonts.googleapis.com/css?family=${fonts.map(item => item.replace(/\s/g, '+')).join('|')}`
 ;(document.head || document.getElementsByTagName('head')[0]).appendChild(fontLink)
 
-// Export ef
-export * from 'ef.js'
 // Export every module
 export * from './components/body'
 export * from './components/header'

@@ -1,8 +1,10 @@
 // Import basic elements
 import {
-	inform, exec, Body, Header, TextLogo, LogoButton, Page,
+	Body, Header, TextLogo, LogoButton, Page,
 	LogoPage, Footer, Drawer, DrawerSection, DrawerItem
 } from '../neonclear.js'
+
+import {inform, exec} from 'ef-core'
 
 import Logo from './components/logo'
 import Section from './components/section'

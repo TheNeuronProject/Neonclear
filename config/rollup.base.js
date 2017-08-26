@@ -28,7 +28,7 @@ import colors from './colors.config.js'
 import efConfig from './ef.config.js'
 const {
 	input,
-	output,
+	name,
 	bundle,
 	devPath,
 	proPath,
@@ -68,7 +68,7 @@ const cssExportMap = {}
 
 export default {
 	input,
-	output,
+	name,
 	bundle: path.normalize(bundle),
 	devPath: path.normalize(devPath),
 	proPath: path.normalize(proPath),

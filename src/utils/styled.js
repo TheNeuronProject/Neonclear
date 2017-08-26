@@ -1,4 +1,4 @@
-import { inform, exec } from 'ef.js'
+import { inform, exec } from 'ef-core'
 
 // Return a styled component
 export default (component, style) => {

@@ -2,7 +2,7 @@
 import tpl from './tpl.ef'
 import style from './style.css'
 import styled from '../../utils/styled.js'
-import { inform, exec } from 'ef.js'
+import { inform, exec } from 'ef-core'
 
 const scrollTop = () => {
 	window.scrollTo(0, 0)

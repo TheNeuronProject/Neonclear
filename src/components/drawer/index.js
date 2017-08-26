@@ -4,7 +4,7 @@ import section from './section.ef'
 import item from './item.ef'
 import style from './style.css'
 import styled from '../../utils/styled.js'
-import { inform, exec } from 'ef.js'
+import { inform, exec } from 'ef-core'
 
 const Drawer = styled(tpl, style)
 
