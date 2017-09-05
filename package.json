@@ -1,6 +1,6 @@
 {
   "name": "neonclear",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "An ef-based frontend UI library",
   "main": "dist/neonclear.full.js",
   "module": "src/neonclear.js",

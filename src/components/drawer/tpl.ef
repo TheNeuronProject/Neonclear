@@ -2,10 +2,12 @@ Write your template here:
 >div.{{style.drawer}}
 	#tabindex = 0
 	>div.{{style.menu_button}}.{{style.retract}}
+		#onclick
 		#tabindex = 0
 		>i.material-icons
 			.menu
 	>div.{{style.menu_button}}.{{style.expand}}
+		#onclick
 		>i.material-icons
 			.menu
 	>div.{{style.holder}}
