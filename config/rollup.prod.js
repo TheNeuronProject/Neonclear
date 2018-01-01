@@ -9,13 +9,13 @@ const config = {
 		name,
 		file: `${proPath}/${bundle}.js`,
 		format: 'umd',
-		sourcemap: true
+		sourcemap: true,
+		globals: {
+			'ef-core': 'efCore'
+		}
 	},
 	plugins,
-	external: ['ef-core'],
-	globals: {
-		'ef-core': 'efCore'
-	}
+	external: ['ef-core']
 }
 
 // Load demo script
