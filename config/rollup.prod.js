@@ -18,4 +18,11 @@ const config = {
 	}
 }
 
+// Load demo script
+if (process.env.BUILD_ENV === 'DEMO') config.input = 'src/demo/loader.js'
+
+delete base.bundle
+delete base.devPath
+delete base.proPath
+
 export default config

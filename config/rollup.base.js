@@ -40,27 +40,15 @@ const {
 console.log('Target:', chalk.bold.green(process.env.NODE_ENV || 'development'))
 switch (process.env.BUILD_ENV) {
 	case 'DEMO': {
-		console.log(chalk.cyan`
-+------------+
-| DEMO BUILD |
-+------------+
-`)
+		console.log(chalk.cyan('+----=+| DEMO BUILD |+=----+'))
 		break
 	}
 	case 'CI': {
-		console.log(chalk.green`
-+----------+
-| CI BUILD |
-+----------+
-`)
+		console.log(chalk.green('+----=+| CI BUILD |+=----+'))
 		break
 	}
 	default: {
-		console.log(chalk.yellow`
-+--------------+
-| NORMAL BUILD |
-+--------------+
-`)
+		console.log(chalk.yellow('+----=+| NORMAL BUILD |+=----+'))
 	}
 }
 
@@ -105,8 +93,7 @@ export default {
 			combineStyleTags
 		}),
 		replace({
-			ENV: `'${process.env.NODE_ENV || 'development'}'`,
-			'// DEMO_BUILD_UNCOMMENT ': process.env.BUILD_ENV === 'DEMO' ? '' : '// '
+			'process.env.NODE_ENV': `'${process.env.NODE_ENV || 'development'}'`
 		}),
 		buble({
 			transforms: {
