@@ -4,7 +4,7 @@ import {
 	LogoPage, Footer, Drawer, DrawerSection, DrawerItem
 } from '../neonclear.js'
 
-import {inform, exec} from 'ef-core'
+import {inform, exec, mountOptions} from 'ef-core'
 
 import Logo from './components/logo'
 import Section from './components/section'
@@ -21,7 +21,7 @@ const BL = new Logo()
 const buttonSoon = new LogoButton({$data: {caption: 'Coming Soon...'}})
 const buttonGH = new LogoButton({
 	$data: {
-		caption: 'View in GitHub'
+		caption: 'View on GitHub'
 	},
 	$methods: {
 		click: function() {
@@ -127,7 +127,7 @@ const drawer = new Drawer({
 })
 body.contents.push(LP, page1, footer, header, drawer)
 header.left.push(logo)
-body.$mount({target: document.body, option: 'replace'})
+body.$mount({target: document.body, option: mountOptions.REPLACE})
 exec()
 
 window.$body = body

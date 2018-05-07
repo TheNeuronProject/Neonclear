@@ -9,17 +9,21 @@ const config = {
 		name,
 		file: `${proPath}/${bundle}.js`,
 		format: 'umd',
-		sourcemap: true
+		sourcemap: true,
+		globals: {
+			'ef-core': 'ef'
+		}
 	},
 	plugins,
-	external: ['ef-core'],
-	globals: {
-		'ef-core': 'efCore'
-	}
+	external: ['ef-core']
 }
 
 // Load demo script
-if (process.env.BUILD_ENV === 'DEMO') config.input = 'src/demo/loader.js'
+if (process.env.BUILD_ENV === 'DEMO') {
+	config.input = 'src/demo/loader.js'
+	config.external.push('neonclear')
+	config.output.globals.neonclear = 'neon'
+}
 
 delete base.bundle
 delete base.devPath
